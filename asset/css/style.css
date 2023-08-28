@@ -1,0 +1,344 @@
+/* import Google font Link //poppins */
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Jost:ital,wght@0,700;1,300&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;1,500&family=Space+Grotesk:wght@700&display=swap');
+
+/* global selector */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Hachi Maru Pop', cursive;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* html */
+html{
+    scroll-behavior: smooth;
+    overflow:hidden;
+}
+/* root  variable*/
+:root{
+    --primaray-color:#fff;
+    --secondary-color:#000;
+}
+
+
+/* navigation */
+nav{
+    background-color:rgb(255, 0, 0) transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15%;
+    animation: nav;
+    animation-duration: 0.4s;
+}
+
+nav .navList{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+
+}
+.nav li a:hover{
+   color: rgb(255,255,255,.3);
+}
+#menu{
+    display: none;
+    cursor: pointer;
+}
+.register{
+    margin-right: 1em;
+}
+/* wrapper */
+#wrapper{
+    background: url('../img/html-css-collage-concept-with-person.jpg') no-repeat center center /cover;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: relative;
+    z-index: 1;
+    animation-name: man;
+    animation-duration: 0.4s;
+}
+
+#wrapper::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to right ,rgba(32,40,119,0.90),rgba(32,40,119,0.90),rgba(32,40,119,0.90));
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* logo */
+.logo{
+    
+    font-weight: 900;
+    font-size: 30px;
+}
+
+/* content start */
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.info{
+    margin-top: 10vh;
+}
+
+.img{
+    position: relative;
+    top: 10vh;
+    filter: drop-shadow(10px 2px -2px black);
+}
+.info h1{
+    color: var(--primaray-color);
+}
+.info p{
+    color: var(--primaray-color);
+    letter-spacing: 1.6px;
+    line-height: 2;
+    margin-top: 20px;
+
+}
+.tamil{
+    animation-duration: 4s ;
+    transition: 0.3s;
+    animation-name: change ;
+    animation-iteration-count: infinite ;
+}
+
+
+.btn{
+    background-color: var(--primaray-color);
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin-top: 5vh;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-image: linear-gradient(to right ,rgba(32,40,119,0.90),rgba(32,40,119,0.90),rgba(32,40,119,0.90));
+    color: var(--primaray-color);
+
+}
+
+/* content end */
+
+/* social-media start */
+.social-media{
+    
+    margin-top:1px;
+    margin-left: 13vh;
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.social-media ul a{
+    color: white;
+}
+
+.facebook-bg{
+    background-color: rgb(83, 83, 232);
+    border-radius: 20px;
+    padding: 10px;
+}
+.facebook-bg:hover{
+    background-color: rgb(83, 83, 232,.2);
+    
+}
+.social-media ul .fa-facebook{
+    color: blue;
+    margin-right: 10px;
+}
+a .facebook {
+    color: white;
+    
+}
+.instagram-bg{
+    background-color: rgb(212, 147, 158);
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.instagram-bg:hover{
+    background-color: rgb(212, 147, 158,.2);
+ 
+
+}
+.social-media ul .fa-instagram{
+    color:pink;
+    margin-right: 10px;
+}
+a .instagram{
+    color: white;
+}
+.linkedin-bg{
+    background-color: rgb(83, 83, 232);
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.linkedin-bg:hover{
+    background-color: rgb(83, 83, 232,.2);
+    
+}
+.social-media ul .fa-linkedin{
+    color:blue;
+    margin-right: 10px;
+}
+a .linkedin{
+    color: white;
+}
+
+/* social-media end */
+
+
+@media(max-width:1330px){
+    .info p{
+        color: var(--primaray-color);
+        letter-spacing: 1.5px;
+        line-height: 1.5;
+        margin-top: 18px;
+    
+    }
+
+}
+@media(max-width:1310px){
+    .info h1{
+        position: relative;
+        bottom: 70px;
+    
+    }
+    .info p{
+      position: relative;
+      bottom: 50px;
+      font-size: 14px;
+      line-height: 2;
+    }
+    .btn{
+        position: absolute;
+        bottom: 20%;
+    
+    }
+}
+@media (max-width:1230px){
+    .info p{
+        display: none;
+
+    }
+    .info h1{
+        position: relative;
+        bottom:150px;
+    
+    }
+    .btn{
+        position: absolute;
+        bottom: 45%;
+    
+    }
+    .social-media{
+        position: relative;
+        bottom: 30%;
+        margin-right: 30px;
+    }
+   
+}
+
+@media(max-width:1200px){
+    .content{
+        flex-direction: column;
+    }
+    .info h1{
+        position: relative;
+        bottom:30px;
+    }
+    .img img{
+        width: 350px;
+        position: relative;
+        bottom: 15vh;
+    }
+    .btn{
+        position: absolute;
+        bottom: 6%;
+        right: 45%;
+        cursor: pointer;
+    }
+    .social-media{
+     display: none;
+
+    }
+
+   
+}
+@media(max-width:800px){
+    main{
+        position: relative;
+        right: 4%;
+        /* background-color: red; */
+
+    }
+    .info h1{
+        font-size: 18px;
+    }
+    .img img{
+        width: 300px;
+        
+    }
+    .btn{
+        position: absolute;
+        bottom: 6%;
+        right:43%;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 15px;
+    }   
+}
+@media(max-width:412px){
+    main{
+        position: relative;
+        left: 35%;
+        width: 100px;
+        /* background-color: red; */
+
+    }
+    .info h1{
+        letter-spacing: 3px;
+        align-self: flex-start;
+        position: relative;
+        right: 20%;
+    }
+    .showmenu{
+        position: absolute;
+        right: 25px;
+        top: 4%;
+        margin-top: 15px;
+        display: block;
+    }
+    .btn{
+        font-size: 14px;
+        width: 15vh;
+        padding: 5px;
+        margin-left: 44%;
+    }
+    
+}
